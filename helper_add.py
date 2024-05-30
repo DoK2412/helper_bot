@@ -1,28 +1,17 @@
 import asyncio
-import logging
 import datetime
 import requests
-
-
 
 from aiogram import Bot, Dispatcher, types
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart
-from aiogram.fsm.context import FSMContext
-from aiogram import F
-from aiogram.types import ReplyKeyboardRemove, \
-    ReplyKeyboardMarkup, KeyboardButton, \
-    InlineKeyboardMarkup, InlineKeyboardButton, Message
+from aiogram.types import Message
 
 from sqlmodel import Session, select
 from database.connection_db import engin
 
 from database.sql_requests import Users, Notes
-
-
-
-
 from setting import bot_token, bot_token_waiting
 
 dp = Dispatcher()
