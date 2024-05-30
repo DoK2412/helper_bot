@@ -23,7 +23,7 @@ async def command_start_handler(message: Message) -> None:
         await asyncio.sleep(1)
         now = datetime.datetime.now()
         current_time = now.strftime("%H:%M:%S")
-        if current_time == '15:15:00':
+        if current_time == '09:00:00':
             date = datetime.datetime.now().date()
             with Session(engin) as session:
                 user_note = session.exec(select(Notes).where(Notes.date == str(date))).all()
